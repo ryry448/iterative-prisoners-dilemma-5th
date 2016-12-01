@@ -7,8 +7,8 @@
 ####
 
 team_name = 'Victorius Secret' # Only 10 chars displayed.
-strategy_name = 'The name the team gives to this strategy'
-strategy_description = 'How does this strategy decide?'
+strategy_name = 'The One Strat'
+strategy_description = 'Regardless of the points that each team has, it will always betray twice and then collude once.'
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
@@ -65,4 +65,12 @@ if __name__ == '__main__':
               # move('bbb', 'ccc', 0, 0) returns 'b'.
               my_score=0, 
               their_score=0,
-              result='b')             
+              result='b')
+                 
+      #Test A: Betray then collude          
+if test_move(my_history = 'bbc',
+            (their_history) = ' ',
+            my_score = 0,
+            their_score = 0,
+            result = 'c'):
+        print('Test Passed')
