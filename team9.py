@@ -28,7 +28,7 @@ def move(my_history, their_history, my_score, their_score):
     
     return 'c'
 
-    
+    ###################
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
     from this module. Prints error if return value != result.
