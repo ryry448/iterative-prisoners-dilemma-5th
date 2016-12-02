@@ -7,9 +7,9 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'The name the team gives to itself' # Only 10 chars displayed.
-strategy_name = 'The name the team gives to this strategy'
-strategy_description = 'How does this strategy decide?'
+team_name = 'team9' # Only 10 chars displayed.
+strategy_name = 'titfortat'
+strategy_description = 'Replicate the enemies'
     
 def titfortat(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
