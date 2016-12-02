@@ -1,14 +1,14 @@
 ####
 # Each team's file must define four tokens:
-#     team_name: a string
+#     team_name: PEPE
 #     strategy_name: a string
 #     strategy_description: a string
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'The name the team gives to itself' # Only 10 chars displayed.
-strategy_name = 'The name the team gives to this strategy'
-strategy_description = 'How does this strategy decide?'
+team_name = 'PEPE' # Only 10 chars displayed. used to be MAKE PEPE GREAT AGAIN but I don't like the '10 characters displayed' lol
+strategy_name = 'petty with trust issues'
+strategy_description = 'betray at first. then collude until the opponent betrays. when the opponent betrays, you betray, then continue to collude. also, if you have a score lower than the opponent, you betray until your score is nearly equal to the opponent. repeat.'
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
@@ -26,7 +26,14 @@ def move(my_history, their_history, my_score, their_score):
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
     
-    return 'c'
+    if len(my_history)==0:
+        return 'b' # betray the first round! ha ha ha (it either gets the benefit first round or gets the weak punishment so it should start off okay)
+    elif their_history[-1]=='b':
+        return 'b' # betray if the opponent betrays because you need your revenge, no matter what you did (because collude won't get you anywhere good)
+    elif their_score >= my_score + 200:
+        return 'b' # bring them down! continue betraying until the opponent's points are near your points
+    else:
+        return 'c' # if not betrayed, then collude and act like normal
 
     
 def test_move(my_history, their_history, my_score, their_score, result):
