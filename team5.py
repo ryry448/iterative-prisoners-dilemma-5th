@@ -26,7 +26,12 @@ def move(my_history, their_history, my_score, their_score):
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
     
-    return 'c'
+    #version 11/30/16
+    #Grudge
+    if 'b' in their_history: #If the opponent decides to betray even once the algorithim will always betray back.
+        return 'b'
+    else:
+        return 'c' #If the opponent never betrays the the algorithim will return 'c'. The algorithim will always print 'c' first because of the lack of the opponents history.
 
     
 def test_move(my_history, their_history, my_score, their_score, result):
